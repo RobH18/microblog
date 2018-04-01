@@ -1,4 +1,4 @@
-2018-04-01 21:37:49,629 ERROR: Exception on /register [POST] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
+2018-04-01 21:35:43,959 ERROR: Exception on /register [POST] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
 Traceback (most recent call last):
   File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
     context)
@@ -61,13 +61,6 @@ Traceback (most recent call last):
     context)
   File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
     cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user [SQL: 'SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.username = ?\n LIMIT ? OFFSET ?'] [parameters: ('u1', 1, 0)] (Background on this error at: http://sqlalche.me/e/e3q8)
-2018-04-01 21:37:57,700 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
-2018-04-01 21:40:19,931 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
-2018-04-01 21:40:28,792 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
-2018-04-01 21:40:59,481 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
-2018-04-01 21:43:23,949 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
-2018-04-01 21:45:15,342 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
-2018-04-01 21:45:43,738 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
-2018-04-01 21:46:46,867 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
-2018-04-01 21:49:28,028 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user [SQL: 'SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.username = ?\n LIMIT ? OFFSET ?'] [parameters: ('user1', 1, 0)] (Background on this error at: http://sqlalche.me/e/e3q8)
+2018-04-01 21:37:22,849 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-01 21:37:39,183 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
