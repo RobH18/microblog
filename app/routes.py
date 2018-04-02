@@ -133,3 +133,10 @@ def unfollow(username):
     db.session.commit()
     flash('You are no longer following {}.'.format(username))
     return redirect(url_for('user', username=username))
+
+@app.route('/explore')
+@login_required
+def explore():
+    posts = Post.query.order_by(Post.timestamp.desc()).all()
+    return render_template('index.html', title='Explore', posts=posts)
+    # don't want form to write blog posts so form argument not included in template call, hence {% if form %} added to template

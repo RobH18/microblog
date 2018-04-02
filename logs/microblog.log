@@ -78,3 +78,4 @@ Traceback (most recent call last):
 jinja2.exceptions.UndefinedError: 'form' is undefined
 2018-04-02 16:54:34,496 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
 2018-04-02 17:17:14,811 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-02 18:00:02,990 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
