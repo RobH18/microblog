@@ -30,8 +30,18 @@ def index():
     #     {'author': {'username': 'Susan'},
     #     'body': 'The Avengers movie was so cool!'}
     #     ]
-    posts = current_user.followed_posts().all() # calling all() triggers execution of SQLAlchemy query object
-    return render_template('index.html', title='Home', form=form, posts=posts)
+    # posts = current_user.followed_posts().all() ... calling all() triggers execution of SQLAlchemy query object
+    page = request.args.get('page', 1, type=int)
+    posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False) # False means empty list for non-existing page, not 404 error (True)
+    if posts.has_next:
+        next_url = url_for('index', page=posts.next_num)
+    else:
+        next_url = None
+    if posts.has_prev:
+        prev_url = url_for('index', page=posts.prev_num)
+    else:
+        prev_url = None
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url) # .items is because of paginate
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -83,11 +93,22 @@ def register():
 @login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
-    posts = [
-        {'author': user, 'body': 'Test post #1'},
-        {'author': user, 'body': 'Test post #2'}
-    ]
-    return render_template('user.html', user=user, posts=posts)
+    # posts = [
+    #     {'author': user, 'body': 'Test post #1'},
+    #     {'author': user, 'body': 'Test post #2'}
+    # ]
+    page = request.args.get('page', 1, type=int)
+    posts = user.posts.order_by(Post.timestamp.desc()).paginate(
+        page, app.config['POSTS_PER_PAGE'], False)
+    if posts.has_next:
+        next_url = url_for('user', username=user.username, page=posts.next_num)
+    else:
+        next_url = None
+    if posts.has_prev:
+        prev_url = url_for('user', username=user.username, page=posts.prev_num)
+    else:
+        prev_url = None
+    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url)
 
 @app.route('/edit_profile', methods=['GET', 'POST'])
 @login_required
@@ -137,6 +158,16 @@ def unfollow(username):
 @app.route('/explore')
 @login_required
 def explore():
-    posts = Post.query.order_by(Post.timestamp.desc()).all()
-    return render_template('index.html', title='Explore', posts=posts)
+    page = request.args.get('page', 1, type=int)
+    # posts = Post.query.order_by(Post.timestamp.desc()).all()
+    posts = Post.query.order_by(Post.timestamp.desc()).paginate(page, app.config['POSTS_PER_PAGE'], False)
+    if posts.has_next:
+        next_url = url_for('explore', page=posts.next_num)
+    else:
+        next_url = None
+    if posts.has_prev:
+        prev_url = url_for('explore', page=posts.prev_num)
+    else:
+        prev_url = None
+    return render_template('index.html', title='Explore', posts=posts.items, next_url=next_url, prev_url=prev_url)
     # don't want form to write blog posts so form argument not included in template call, hence {% if form %} added to template
