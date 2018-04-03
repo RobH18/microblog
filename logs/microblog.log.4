@@ -1,4 +1,79 @@
-2018-04-03 18:00:15,843 ERROR: Exception on /user/user1 [GET] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
+2018-04-01 21:37:49,629 ERROR: Exception on /register [POST] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
+Traceback (most recent call last):
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: user
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 63, in register
+    if form.validate_on_submit():
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask_wtf\form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\wtforms\form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\wtforms\form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\wtforms\fields\core.py", line 204, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\wtforms\fields\core.py", line 224, in _run_validation_chain
+    validator(form, self)
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\forms.py", line 22, in validate_username
+    user = User.query.filter_by(username=username.data).first()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\orm\query.py", line 2789, in first
+    ret = list(self[0:1])
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\orm\query.py", line 2581, in __getitem__
+    return list(res)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\orm\query.py", line 2889, in __iter__
+    return self._execute_and_instances(context)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\orm\query.py", line 2912, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\util\compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: user [SQL: 'SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen \nFROM user \nWHERE user.username = ?\n LIMIT ? OFFSET ?'] [parameters: ('u1', 1, 0)] (Background on this error at: http://sqlalche.me/e/e3q8)
+2018-04-01 21:37:57,700 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-01 21:40:19,931 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-01 21:40:28,792 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-01 21:40:59,481 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-01 21:43:23,949 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-01 21:45:15,342 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-01 21:45:43,738 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-01 21:46:46,867 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-01 21:49:28,028 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-02 16:44:17,753 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-02 16:51:33,780 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-02 16:51:43,442 ERROR: Exception on /index [GET] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
 Traceback (most recent call last):
   File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,80 +89,26 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 112, in user
-    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 133, in render_template
-    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\loaders.py", line 125, in load
-    code = environment.compile(source, name, filename)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 591, in compile
-    self.handle_exception(exc_info, source_hint=source_hint)
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 25, in index
+    return render_template('index.html', title='Home', posts=posts)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 134, in render_template
+    context, ctx.app)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 116, in _render
+    rv = template.render(context)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
   File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
   File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\_compat.py", line 37, in reraise
     raise value.with_traceback(tb)
-  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\templates\user.html", line 23, in template
-    {% include '_post.html'}
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 497, in _parse
-    return Parser(self, source, name, encode_filename(filename)).parse()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 901, in parse
-    result = nodes.Template(self.subparse(), lineno=1)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 268, in parse_block
-    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
-    result = self.subparse(end_tokens)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 199, in parse_for
-    body = self.parse_statements(('name:endfor', 'name:else'))
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
-    result = self.subparse(end_tokens)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 288, in parse_include
-    node.template = self.parse_expression()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 432, in parse_expression
-    return self.parse_condexpr()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 437, in parse_condexpr
-    expr1 = self.parse_or()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 450, in parse_or
-    left = self.parse_and()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 459, in parse_and
-    left = self.parse_not()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 470, in parse_not
-    return self.parse_compare()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 474, in parse_compare
-    expr = self.parse_math1()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 496, in parse_math1
-    left = self.parse_concat()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 507, in parse_concat
-    args = [self.parse_math2()]
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 517, in parse_math2
-    left = self.parse_pow()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 528, in parse_pow
-    left = self.parse_unary()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 546, in parse_unary
-    node = self.parse_primary()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 564, in parse_primary
-    next(self.stream)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\lexer.py", line 359, in __next__
-    self.current = next(self._iter)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\lexer.py", line 562, in wrap
-    for lineno, token, value in stream:
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\lexer.py", line 683, in tokeniter
-    filename)
-jinja2.exceptions.TemplateSyntaxError: unexpected '}'
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\templates\base.html", line 32, in top-level template code
+    {% block content %}{% endblock %}
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\templates\index.html", line 6, in block "content"
+    {{ form.hidden_tag() }}
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 430, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined

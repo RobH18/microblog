@@ -9,6 +9,7 @@ from config import Config
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
+from flask_moment import Moment
 
 app = Flask(__name__) # 'from app import app' this is the second 'app' reference
 app.config.from_object(Config) # updates config from Config object
@@ -19,6 +20,7 @@ login.login_view = 'login' # such that force login page is set so protected feat
 # 'login' value is function name for login view
 mail = Mail(app)
 bootstrap = Bootstrap(app)
+moment = Moment(app)
 
 from app import routes, models, errors
 

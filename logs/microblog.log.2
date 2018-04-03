@@ -1,4 +1,4 @@
-2018-04-03 18:07:43,560 ERROR: Exception on /user/user3 [GET] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
+2018-04-02 19:10:47,202 ERROR: Exception on /index [GET] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
 Traceback (most recent call last):
   File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,81 +14,93 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 112, in user
-    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 133, in render_template
-    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 869, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 830, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 804, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\loaders.py", line 125, in load
-    code = environment.compile(source, name, filename)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 591, in compile
-    self.handle_exception(exc_info, source_hint=source_hint)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 44, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url) # .items is because of paginate
+UnboundLocalError: local variable 'next_url' referenced before assignment
+2018-04-02 19:10:49,182 ERROR: Exception on /index [GET] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
+Traceback (most recent call last):
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\templates\user.html", line 23, in template
-    {% include '_post.html'}
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 497, in _parse
-    return Parser(self, source, name, encode_filename(filename)).parse()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 901, in parse
-    result = nodes.Template(self.subparse(), lineno=1)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 268, in parse_block
-    node.body = self.parse_statements(('name:endblock',), drop_needle=True)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
-    result = self.subparse(end_tokens)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 199, in parse_for
-    body = self.parse_statements(('name:endfor', 'name:else'))
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 165, in parse_statements
-    result = self.subparse(end_tokens)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 883, in subparse
-    rv = self.parse_statement()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 130, in parse_statement
-    return getattr(self, 'parse_' + self.stream.current.value)()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 288, in parse_include
-    node.template = self.parse_expression()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 432, in parse_expression
-    return self.parse_condexpr()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 437, in parse_condexpr
-    expr1 = self.parse_or()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 450, in parse_or
-    left = self.parse_and()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 459, in parse_and
-    left = self.parse_not()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 470, in parse_not
-    return self.parse_compare()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 474, in parse_compare
-    expr = self.parse_math1()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 496, in parse_math1
-    left = self.parse_concat()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 507, in parse_concat
-    args = [self.parse_math2()]
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 517, in parse_math2
-    left = self.parse_pow()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 528, in parse_pow
-    left = self.parse_unary()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 546, in parse_unary
-    node = self.parse_primary()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\parser.py", line 564, in parse_primary
-    next(self.stream)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\lexer.py", line 359, in __next__
-    self.current = next(self._iter)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\lexer.py", line 562, in wrap
-    for lineno, token, value in stream:
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\lexer.py", line 683, in tokeniter
-    filename)
-jinja2.exceptions.TemplateSyntaxError: unexpected '}'
-2018-04-03 18:08:07,902 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:50
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 44, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url) # .items is because of paginate
+UnboundLocalError: local variable 'next_url' referenced before assignment
+2018-04-02 19:10:50,178 ERROR: Exception on /index [GET] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
+Traceback (most recent call last):
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 44, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url) # .items is because of paginate
+UnboundLocalError: local variable 'next_url' referenced before assignment
+2018-04-02 19:13:29,285 ERROR: Exception on /index [GET] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
+Traceback (most recent call last):
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 44, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url) # .items is because of paginate
+UnboundLocalError: local variable 'next_url' referenced before assignment
+2018-04-02 19:15:31,832 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-02 19:23:01,266 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-02 19:46:19,356 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-02 21:26:21,292 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-02 21:26:40,279 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:46
+2018-04-02 21:43:57,313 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:48
+2018-04-02 21:50:35,960 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:48
+2018-04-02 21:54:49,192 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:48
+2018-04-02 21:59:06,599 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:48
+2018-04-03 02:11:59,821 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:48
+2018-04-03 02:12:33,758 ERROR: Exception on /reset_password_request [POST] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
+Traceback (most recent call last):
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\_compat.py", line 33, in reraise
+    raise value
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 184, in reset_password_request
+    send_password_reset_email(user)
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\email.py", line 19, in send_password_reset_email
+    user=userr, token=token))
+NameError: name 'userr' is not defined
+2018-04-03 02:12:51,369 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:48
