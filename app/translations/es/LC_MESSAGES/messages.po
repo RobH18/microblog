@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-04 18:42+0100\n"
+"POT-Creation-Date: 2018-04-05 01:37+0100\n"
 "PO-Revision-Date: 2018-04-04 18:42+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -24,7 +24,7 @@ msgstr "Por favor ingrese para acceder a esta página."
 
 #: app/email.py:19
 msgid "[Microblog] Reset Your Password"
-msgstr [Microblog] Nueva Contraseña
+msgstr "Microblog] Nueva Contraseñ"
 
 #: app/forms.py:8 app/forms.py:14 app/forms.py:33
 msgid "Username"
@@ -38,7 +38,7 @@ msgstr "Contraseña"
 msgid "Remember Me"
 msgstr "Recordarme"
 
-#: app/forms.py:11 app/routes.py:63 app/templates/login.html:5
+#: app/forms.py:11 app/routes.py:68 app/templates/login.html:5
 msgid "Sign In"
 msgstr "Ingresar"
 
@@ -50,7 +50,7 @@ msgstr "Email"
 msgid "Repeat Password"
 msgstr "Repetir Contraseña"
 
-#: app/forms.py:18 app/routes.py:91 app/templates/register.html:5
+#: app/forms.py:18 app/routes.py:96 app/templates/register.html:5
 msgid "Register"
 msgstr "Registrarse"
 
@@ -78,68 +78,72 @@ msgstr "Dí algo"
 msgid "Request Password Reset"
 msgstr "Pedir una nueva contraseña"
 
-#: app/routes.py:27
+#: app/routes.py:32
 msgid "Your post is now live!"
 msgstr "¡Tu artículo ha sido publicado!"
 
-#: app/routes.py:46 app/templates/base.html:21
+#: app/routes.py:51 app/templates/base.html:21
 msgid "Home"
 msgstr "Inicio"
 
-#: app/routes.py:56
+#: app/routes.py:61
 msgid "Invalid username or password"
 msgstr "Nombre de usuario o contraseña inválidos"
 
-#: app/routes.py:89
+#: app/routes.py:94
 msgid "Congratulations, you are now a registered user!"
 msgstr "¡Felicitaciones, ya eres un usuario registrado!"
 
-#: app/routes.py:123
+#: app/routes.py:128
 msgid "Your changes have been saved."
 msgstr "Tus cambios han sido salvados."
 
-#: app/routes.py:128 app/templates/edit_profile.html:5
+#: app/routes.py:133 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Editar Perfil"
 
-#: app/routes.py:135 app/routes.py:150
+#: app/routes.py:140 app/routes.py:155
 #, python-format
 msgid "User %(username)s not found."
 msgstr "El usuario %(username)s no ha sido encontrado."
 
-#: app/routes.py:138
+#: app/routes.py:143
 msgid "You cannot follow yourself!"
 msgstr "¡No te puedes seguir a tí mismo!"
 
-#: app/routes.py:142
+#: app/routes.py:147
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "¡Ahora estás siguiendo a %(username)s!"
 
-#: app/routes.py:153
+#: app/routes.py:158
 msgid "You cannot unfollow yourself!"
 msgstr "¡No te puedes dejar de seguir a tí mismo!"
 
-#: app/routes.py:157
+#: app/routes.py:162
 #, python-format
 msgid "You are no longer following %(username)s."
 msgstr "No estás siguiendo a %(username)s."
 
-#: app/routes.py:174 app/templates/base.html:22
+#: app/routes.py:179 app/templates/base.html:22
 msgid "Explore"
 msgstr "Explorar"
 
-#: app/routes.py:186
+#: app/routes.py:191
 msgid "Check your email for the instructions to reset your password"
 msgstr "Busca en tu email las instrucciones para crear una nueva contraseña"
 
-#: app/routes.py:188 app/templates/reset_password_request.html:5
+#: app/routes.py:193 app/templates/reset_password_request.html:5
 msgid "Reset Password"
 msgstr "Nueva Contraseña"
 
-#: app/routes.py:201
+#: app/routes.py:206
 msgid "Your password has been reset."
 msgstr "Tu contraseña ha sido cambiada."
+
+#: app/translate.py:14
+msgid "Error: the translation service failed."
+msgstr "Error: el servicio de traducciones ha fallado."
 
 #: app/templates/404.html:4
 msgid "Page Not Found"
@@ -162,6 +166,10 @@ msgstr "El administrador ha sido notificado. ¡Lamentamos la inconveniencia!"
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s dijo %(when)s"
 
+#: app/templates/_post.html:25
+msgid "Translate"
+msgstr "Traducir"
+
 #: app/templates/base.html:4
 msgid "Welcome to Microblog"
 msgstr "Bienvenido a Microblog"
@@ -177,6 +185,10 @@ msgstr "Perfil"
 #: app/templates/base.html:29
 msgid "Logout"
 msgstr "Salir"
+
+#: app/templates/base.html:67
+msgid "Error: Could not contact server."
+msgstr "Error: el servidor no pudo ser contactado."
 
 #: app/templates/index.html:5
 #, python-format

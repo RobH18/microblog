@@ -91,6 +91,7 @@ class Post(db.Model):
     body = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index=True, default=datetime.utcnow) # indexed - useful to retrieve posts in chronological order
     user_id = db.Column(db.Integer, db.ForeignKey('user.id')) # 'user' is name of database table for model
+    language = db.Column(db.String(5))
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)

@@ -1,4 +1,4 @@
-2018-04-03 22:04:27,061 ERROR: Exception on /login [GET] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
+2018-04-05 01:41:28,143 ERROR: Exception on / [POST] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
 Traceback (most recent call last):
   File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,76 +12,13 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 62, in login
-    return render_template('login.html', title='Sign In', form=form)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 134, in render_template
-    context, ctx.app)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 116, in _render
-    rv = template.render(context)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\templates\login.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 57, in get_source
-    return self._get_source_fast(environment, template)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: bootstrap/wtf.html
-2018-04-03 22:04:57,119 ERROR: Exception on /login [GET] [in c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py:1560
-Traceback (most recent call last):
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\_compat.py", line 33, in reraise
-    raise value
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 62, in login
-    return render_template('login.html', title='Sign In', form=form)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 134, in render_template
-    context, ctx.app)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 116, in _render
-    rv = template.render(context)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
-    return original_render(self, *args, **kwargs)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\templates\login.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 57, in get_source
-    return self._get_source_fast(environment, template)
-  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask\templating.py", line 85, in _get_source_fast
-    raise TemplateNotFound(template)
-jinja2.exceptions.TemplateNotFound: bootstrap/wtf.html
-2018-04-03 22:05:48,480 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:50
-2018-04-03 22:10:37,397 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:52
-2018-04-04 16:55:51,369 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:54
-2018-04-04 17:33:56,601 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 18:53:26,732 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 18:54:18,288 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 19:01:56,006 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 19:26:00,733 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 19:26:31,266 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 19:28:41,219 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 19:30:16,173 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 19:30:54,416 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 19:43:05,600 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 19:43:09,382 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 19:43:39,792 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 19:45:53,682 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
-2018-04-04 21:07:52,763 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
+  File "c:\users\rhlapt~1\docume~1\python~1\venvs~1\flaskw~1\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\routes.py", line 26, in index
+    language = guess_language(form.post.data)
+NameError: name 'guess_language' is not defined
+2018-04-05 01:42:55,325 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
+2018-04-05 01:44:58,334 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
+2018-04-05 01:45:44,284 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
+2018-04-05 01:49:07,549 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53
+2018-04-05 01:51:48,219 INFO: Microblog startup [in C:\Users\RH Laptop\Documents\PythonFiles\Git_Microblog\app\__init__.py:53

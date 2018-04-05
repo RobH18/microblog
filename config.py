@@ -14,3 +14,4 @@ class Config(object):
     ADMINS = ['roboffice100@gmail.com']
     POSTS_PER_PAGE = 3
     LANGUAGES = ['en', 'es', 'fr']
+    YD_TRANSLATOR_KEY = os.environ.get('YD_TRANSLATOR_KEY') # yandex translate API
